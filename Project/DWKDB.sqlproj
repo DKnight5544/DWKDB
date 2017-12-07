@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>DWKDB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{b68f1b8e-bce3-4ac8-97b9-afdd8b1a99bd}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>DWKDB</RootNamespace>
+    <AssemblyName>DWKDB</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <AnsiNulls>False</AnsiNulls>
+    <QuotedIdentifier>False</QuotedIdentifier>
+    <QueryStoreCaptureMode>Auto</QueryStoreCaptureMode>
+    <QueryStoreDesiredState>Off</QueryStoreDesiredState>
+    <QueryStoreFlushInterval>900</QueryStoreFlushInterval>
+    <QueryStoreStatsInterval>60</QueryStoreStatsInterval>
+    <QueryStoreMaxPlansPerQuery>200</QueryStoreMaxPlansPerQuery>
+    <QueryStoreStaleQueryThreshold>30</QueryStoreStaleQueryThreshold>
+    <QueryStoreMaxStorageSize>100</QueryStoreMaxStorageSize>
+    <DbScopedConfigLegacyCardinalityEstimation>Off</DbScopedConfigLegacyCardinalityEstimation>
+    <DbScopedConfigMaxDOP>0</DbScopedConfigMaxDOP>
+    <DbScopedConfigParameterSniffing>On</DbScopedConfigParameterSniffing>
+    <DbScopedConfigOptimizerHotfixes>Off</DbScopedConfigOptimizerHotfixes>
+    <DelayedDurability>DISABLED</DelayedDurability>
+    <AutoCreateStatisticsIncremental>False</AutoCreateStatisticsIncremental>
+    <MemoryOptimizedElevateToSnapshot>False</MemoryOptimizedElevateToSnapshot>
+    <Containment>None</Containment>
+    <IsNestedTriggersOn>True</IsNestedTriggersOn>
+    <IsTransformNoiseWordsOn>False</IsTransformNoiseWordsOn>
+    <TwoDigitYearCutoff>2049</TwoDigitYearCutoff>
+    <NonTransactedFileStreamAccess>OFF</NonTransactedFileStreamAccess>
+    <TargetRecoveryTimePeriod>120</TargetRecoveryTimePeriod>
+    <TargetRecoveryTimeUnit>SECONDS</TargetRecoveryTimeUnit>
+    <IsChangeTrackingOn>False</IsChangeTrackingOn>
+    <IsChangeTrackingAutoCleanupOn>True</IsChangeTrackingAutoCleanupOn>
+    <ChangeTrackingRetentionPeriod>2</ChangeTrackingRetentionPeriod>
+    <ChangeTrackingRetentionUnit>Days</ChangeTrackingRetentionUnit>
+    <IsEncryptionOn>False</IsEncryptionOn>
+    <IsBrokerPriorityHonored>False</IsBrokerPriorityHonored>
+    <Trustworthy>False</Trustworthy>
+    <AutoUpdateStatisticsAsynchronously>False</AutoUpdateStatisticsAsynchronously>
+    <PageVerify>CHECKSUM</PageVerify>
+    <ServiceBrokerOption>EnableBroker</ServiceBrokerOption>
+    <DateCorrelationOptimizationOn>False</DateCorrelationOptimizationOn>
+    <Parameterization>SIMPLE</Parameterization>
+    <AllowSnapshotIsolation>True</AllowSnapshotIsolation>
+    <ReadCommittedSnapshot>False</ReadCommittedSnapshot>
+    <VardecimalStorageFormatOn>True</VardecimalStorageFormatOn>
+    <SupplementalLoggingOn>False</SupplementalLoggingOn>
+    <CompatibilityMode>130</CompatibilityMode>
+    <AnsiNullDefault>False</AnsiNullDefault>
+    <AnsiPadding>False</AnsiPadding>
+    <AnsiWarnings>False</AnsiWarnings>
+    <ArithAbort>False</ArithAbort>
+    <ConcatNullYieldsNull>False</ConcatNullYieldsNull>
+    <NumericRoundAbort>False</NumericRoundAbort>
+    <RecursiveTriggersEnabled>False</RecursiveTriggersEnabled>
+    <DatabaseChaining>False</DatabaseChaining>
+    <DatabaseState>ONLINE</DatabaseState>
+    <CloseCursorOnCommitEnabled>False</CloseCursorOnCommitEnabled>
+    <DefaultCursor>GLOBAL</DefaultCursor>
+    <AutoClose>False</AutoClose>
+    <AutoCreateStatistics>True</AutoCreateStatistics>
+    <AutoShrink>False</AutoShrink>
+    <AutoUpdateStatistics>True</AutoUpdateStatistics>
+    <TornPageDetection>False</TornPageDetection>
+    <DatabaseAccess>MULTI_USER</DatabaseAccess>
+    <Recovery>FULL</Recovery>
+    <EnableFullTextSearch>True</EnableFullTextSearch>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="tmrz" />
+    <Folder Include="tmrz\Tables" />
+    <Folder Include="tmrz\StoredProcedures" />
+    <Folder Include="tmrz\Views" />
+    <Folder Include="tmrz\LiveQueries" />
+    <Folder Include="tmrz\Functions" />
+    <Folder Include="bt" />
+    <Folder Include="bt\Tables" />
+    <Folder Include="bt\Stored Procedures" />
+    <Folder Include="ref" />
+    <Folder Include="ref\Tables" />
+    <Folder Include="ref\StoredProcs" />
+    <Folder Include="ref\Funtions" />
+    <Folder Include="cl" />
+    <Folder Include="cl\Tables" />
+    <Folder Include="cl\StoredProcedures" />
+    <Folder Include="wrd" />
+    <Folder Include="wrd\Tables" />
+    <Folder Include="wrd\StoredProcs" />
+    <Folder Include="wrd\Functions" />
+    <Folder Include="wrd\Views" />
+    <Folder Include="wrd\Scripts" />
+    <Folder Include="email" />
+    <Folder Include="email\Tables" />
+    <Folder Include="email\StoredProcs" />
+    <Folder Include="ss" />
+    <Folder Include="ss\Tables" />
+    <Folder Include="ss\StoredProcs" />
+    <Folder Include="ss\Scripts" />
+    <Folder Include="ss\Views" />
+    <Folder Include="g1" />
+    <Folder Include="g1\Tables" />
+    <Folder Include="g1\StoredProcs" />
+    <Folder Include="chess" />
+    <Folder Include="chess\Tables" />
+    <Folder Include="chess\Excel" />
+    <Folder Include="chess\StoredProcedures" />
+    <Folder Include="chess\View" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="tmrz\Tables\Pages.sql" />
+    <Build Include="tmrz\Tables\Timers.sql" />
+    <Build Include="tmrz\CreateSchema.sql" />
+    <Build Include="tmrz\StoredProcedures\ToggleTimer.sql" />
+    <Build Include="tmrz\StoredProcedures\AddPage.sql" />
+    <Build Include="tmrz\StoredProcedures\AddTimer.sql" />
+    <Build Include="tmrz\Views\AllDataView.sql" />
+    <None Include="tmrz\LiveQueries\QueryOne.sql" />
+    <Build Include="tmrz\StoredProcedures\RenameTimer.sql" />
+    <Build Include="tmrz\StoredProcedures\RenamePage.sql" />
+    <Build Include="tmrz\Tables\IPN_Log.sql" />
+    <Build Include="tmrz\StoredProcedures\SaveIPN.sql" />
+    <Build Include="tmrz\StoredProcedures\ResetTimer.sql" />
+    <Build Include="tmrz\StoredProcedures\PagesCleanup.sql" />
+    <Build Include="tmrz\Functions\IsPage.sql" />
+    <Build Include="tmrz\StoredProcedures\DeleteTimer.sql" />
+    <Build Include="tmrz\StoredProcedures\GetPageRefreshData.sql" />
+    <Build Include="tmrz\StoredProcedures\AdjustTime.sql" />
+    <Build Include="bt\CreateSchema.sql" />
+    <Build Include="bt\Tables\Canvas.sql" />
+    <Build Include="bt\Tables\Viewport.sql" />
+    <Build Include="bt\Stored Procedures\GetViewports.sql" />
+    <Build Include="bt\Stored Procedures\GetCanvas.sql" />
+    <Build Include="bt\Stored Procedures\GetNewViewport.sql" />
+    <Build Include="bt\Stored Procedures\SaveViewport.sql" />
+    <Build Include="bt\Stored Procedures\GetClonedViewport.sql" />
+    <Build Include="bt\Stored Procedures\DeleteViewport.sql" />
+    <Build Include="bt\Tables\TextComponent.sql" />
+    <Build Include="bt\Stored Procedures\GetTextComponent.sql" />
+    <Build Include="bt\Stored Procedures\SaveTextComponent.sql" />
+    <Build Include="bt\Stored Procedures\CloneTextComponent.sql" />
+    <Build Include="bt\Tables\HtmlComponent.sql" />
+    <Build Include="bt\Stored Procedures\CloneHtmlComponent.sql" />
+    <Build Include="bt\Stored Procedures\GetHtmlComponent.sql" />
+    <Build Include="bt\Stored Procedures\SaveHtmlComponent.sql" />
+    <Build Include="ref\CreateSchema.sql" />
+    <Build Include="ref\Tables\Domain.sql" />
+    <Build Include="ref\Tables\Account.sql" />
+    <Build Include="ref\StoredProcs\GetNewAccount.sql" />
+    <Build Include="ref\StoredProcs\GetFessOwed.sql" />
+    <Build Include="ref\StoredProcs\GetAccountByID.sql" />
+    <Build Include="ref\StoredProcs\GetDomainList.sql" />
+    <Build Include="ref\StoredProcs\IsAvailable.sql" />
+    <Build Include="ref\StoredProcs\PurgeWhereOutaTime.sql" />
+    <Build Include="ref\StoredProcs\RegisterSale.sql" />
+    <Build Include="cl\CreateSchema.sql" />
+    <Build Include="cl\Tables\User.sql" />
+    <Build Include="cl\StoredProcedures\GetUser.sql" />
+    <Build Include="cl\StoredProcedures\CreateUser.sql" />
+    <Build Include="cl\StoredProcedures\Activate.sql" />
+    <Build Include="cl\Tables\Config.sql" />
+    <Build Include="cl\StoredProcedures\GetStats.sql" />
+    <Build Include="cl\StoredProcedures\SaveIPN.sql" />
+    <Build Include="cl\Tables\IPN_Log.sql" />
+    <Build Include="wrd\CreateSchema.sql" />
+    <Build Include="wrd\Tables\Game.sql" />
+    <Build Include="wrd\Tables\LetterDistribution.sql" />
+    <None Include="wrd\Functions\fncNextOpenLocation.sql" />
+    <Build Include="wrd\Tables\GamePlayer.sql" />
+    <Build Include="wrd\Tables\Integers.sql" />
+    <Build Include="wrd\Tables\LegalWords.sql" />
+    <None Include="wrd\StoredProcs\AddLegalWord.sql" />
+    <None Include="wrd\Scripts\Reset Wordster.sql" />
+    <Build Include="wrd\Tables\Player.sql" />
+    <Build Include="wrd\StoredProcs\AddPlayer.sql" />
+    <Build Include="wrd\StoredProcs\GetPlayer.sql" />
+    <None Include="wrd\Scripts\LoadLetterDistribution.sql" />
+    <Build Include="wrd\StoredProcs\InsertGameRow.sql" />
+    <Build Include="wrd\StoredProcs\FindWords.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="wrd\StoredProcs\GameOver.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="wrd\Views\GameStats.sql" />
+    <Build Include="wrd\Tables\GamePlayerLetter.sql" />
+    <Build Include="wrd\StoredProcs\GetBoard.sql" />
+    <Build Include="wrd\StoredProcs\GetGamesByPlayerID.sql" />
+    <Build Include="wrd\StoredProcs\RepositionWords.sql" />
+    <Build Include="email\CreateSchema.sql" />
+    <Build Include="email\Tables\EmailAddresses.sql" />
+    <Build Include="email\StoredProcs\EmailAddressInsertDistinct.sql" />
+    <Build Include="email\Tables\EmailAddresses_Temp.sql" />
+    <Build Include="ref\StoredProcs\GetNextX.sql" />
+    <Build Include="ss\StoredProcs\Event_Insert.sql" />
+    <Build Include="ss\Scripts\CreateSchema.sql" />
+    <Build Include="ss\Tables\Contest.sql" />
+    <Build Include="ss\Tables\Dancer.sql" />
+    <Build Include="ss\Tables\DancerEvent.sql" />
+    <Build Include="ss\Tables\Event.sql" />
+    <Build Include="ss\Tables\Heat.sql" />
+    <Build Include="ss\Tables\Judge.sql" />
+    <Build Include="ss\Tables\JudgingSession.sql" />
+    <Build Include="ss\Tables\Round.sql" />
+    <Build Include="ss\Tables\RoundType.sql" />
+    <Build Include="ss\Tables\ScoringMethod.sql" />
+    <Build Include="ss\Tables\WebsiteUser.sql" />
+    <Build Include="ss\StoredProcs\WebsiteUser_Login.sql" />
+    <Build Include="ss\StoredProcs\Event_SelectByEventID.sql" />
+    <Build Include="ss\StoredProcs\Contest_SelectByContestID.sql" />
+    <Build Include="ss\Views\EventView.sql" />
+    <Build Include="ss\Views\ContestView.sql" />
+    <Build Include="ss\StoredProcs\Contest_SelectByEventID.sql" />
+    <Build Include="ss\StoredProcs\Dancer_SelectAll.sql" />
+    <Build Include="ss\Tables\DancerRole.sql" />
+    <Build Include="ss\Tables\Partnership.sql" />
+    <Build Include="ss\Tables\PartnershipDancer.sql" />
+    <Build Include="ss\StoredProcs\Rounds_SelectByContestID.sql" />
+    <Build Include="ss\StoredProcs\Partnership_SelectByRoundID.sql" />
+    <Build Include="ss\StoredProcs\PartnershipDancer_SelectByPartnershipID.sql" />
+    <Build Include="ss\StoredProcs\ContestView_SelectByContestID.sql" />
+    <Build Include="ss\StoredProcs\ContestView_SelectByRoundID.sql" />
+    <Build Include="ss\StoredProcs\Event_SelectAll.sql" />
+    <Build Include="ss\Tables\Permission.sql" />
+    <Build Include="ss\Tables\UserPermission.sql" />
+    <Build Include="ss\StoredProcs\IsAuthorized.sql" />
+    <Build Include="ss\StoredProcs\Event_SelectFilteredByDancer.sql" />
+    <Build Include="ss\StoredProcs\Dancer_SelectByFirstLetter.sql" />
+    <Build Include="ss\StoredProcs\WebsiteUser_UpdateDancerIDFilter.sql" />
+    <Build Include="ss\StoredProcs\WebsiteUser_SelectByFBID.sql" />
+    <Build Include="ss\StoredProcs\Dancer_SelectByDancerID.sql" />
+    <Build Include="ss\StoredProcs\Contest_SelectFilteredByDancer.sql" />
+    <Build Include="tmrz\Views\OneThousand.sql" />
+    <Build Include="tmrz\StoredProcedures\GetPage.sql" />
+    <Build Include="tmrz\Views\PageView.sql" />
+    <Build Include="tmrz\StoredProcedures\StopTimer.sql" />
+    <Build Include="tmrz\StoredProcedures\GetTimer.sql" />
+    <Build Include="g1\CreateSchema.sql" />
+    <Build Include="g1\Tables\Transaction.sql" />
+    <Build Include="g1\StoredProcs\Buy.sql" />
+    <Build Include="g1\StoredProcs\Next.sql" />
+    <Build Include="g1\StoredProcs\ListByEmail.sql" />
+    <Build Include="chess\CreateSchema.sql" />
+    <Build Include="chess\Tables\Engram.sql" />
+    <Build Include="chess\Tables\Game.sql" />
+    <Build Include="chess\StoredProcedures\GetNewGame.sql" />
+    <Build Include="chess\Tables\Move.sql" />
+    <Build Include="chess\StoredProcedures\GetBoard.sql" />
+    <Build Include="chess\StoredProcedures\GetBestMove.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="chess\StoredProcedures\SaveGame.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="chess\StoredProcedures\GetGameByGameID.sql" />
+    <Build Include="chess\View\MoveViewOne.sql" />
+    <Build Include="chess\StoredProcedures\GetLastGame.sql" />
+    <Build Include="chess\StoredProcedures\GetSelfGameStats.sql" />
+    <Build Include="chess\StoredProcedures\SaveMove.sql" />
+    <Build Include="chess\StoredProcedures\GetGameByWebID.sql" />
+    <Build Include="chess\StoredProcedures\SaveGameByWebID.sql" />
+    <Build Include="chess\StoredProcedures\SaveGamePart2.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Notes.txt" />
+    <PostDeploy Include="PostDeploymentScript.sql" />
+    <None Include="wrd\Scripts\FindWords.sql" />
+    <None Include="wrd\Scripts\Insert_10000_Games.sql" />
+    <None Include="chess\Excel\PositionMapInserts.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="DWKDB.refactorlog" />
+  </ItemGroup>
+</Project>

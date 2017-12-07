@@ -1,0 +1,8 @@
+﻿CREATE TABLE [tmrz].[IPN_Log]
+(
+	[ID] INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	[Time] DATETIME NOT NULL  DEFAULT (getdate()), 
+    [Value] NVARCHAR(1000) NOT NULL
+)
+
+GO

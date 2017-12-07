@@ -1,0 +1,5 @@
+﻿CREATE TABLE [cl].[Config]
+(
+	[Key] VARCHAR(20) NOT NULL PRIMARY KEY, 
+    [Value] VARCHAR(100) NOT NULL
+)
