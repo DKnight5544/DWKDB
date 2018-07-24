@@ -4,12 +4,43 @@
 AS
 
 
-if(@PageName like '*PlusDays%') begin
-
-	declare @Days int = convert(int,replace(@PageName,'*PlusDays',''))
+if(@PageName like '*YEAR') begin
 
 	update p set
-		p.ExpirationTime = dateadd(day, @Days, p.ExpirationTime)
+		p.ExpirationTime = dateadd(day, 365, p.ExpirationTime)
+	from tmrz.Pages p
+	where p.PageID = @PageID;
+
+
+end
+
+else if(@PageName like '*MONTH') begin
+
+
+	update p set
+		p.ExpirationTime = dateadd(day, 30, p.ExpirationTime)
+	from tmrz.Pages p
+	where p.PageID = @PageID;
+
+
+end
+
+else if(@PageName like '*WEEK') begin
+
+
+	update p set
+		p.ExpirationTime = dateadd(day, 7, p.ExpirationTime)
+	from tmrz.Pages p
+	where p.PageID = @PageID;
+
+
+end
+
+else if(@PageName like '*DAY') begin
+
+
+	update p set
+		p.ExpirationTime = dateadd(day, 1, p.ExpirationTime)
 	from tmrz.Pages p
 	where p.PageID = @PageID;
 

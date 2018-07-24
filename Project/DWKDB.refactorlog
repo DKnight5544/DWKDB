@@ -469,4 +469,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="KingHasMoved" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="7b76a7d1-2e4f-42e4-b759-9a3c8e0c3f47" ChangeDateTime="07/01/2018 00:12:46">
+    <Property Name="ElementName" Value="[dbo].[Giver].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Giver]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="GiverID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="20dbe533-bc23-4780-981b-f66450aaa689" ChangeDateTime="07/09/2018 12:45:02">
+    <Property Name="ElementName" Value="[WordScapeCheat].[ValidWords].[WordLength]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[WordScapeCheat].[ValidWords]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Code" />
+  </Operation>
 </Operations>
