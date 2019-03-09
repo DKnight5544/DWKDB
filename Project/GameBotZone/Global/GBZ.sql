@@ -1,0 +1,13 @@
+﻿
+CREATE LOGIN GBZ_User
+	WITH PASSWORD = 'uec|hneybM1fyd{y}CpAeq7XmsFT7_&#$!~<g_coswhpCxty'
+GO
+
+CREATE USER [GBZ_User]
+GO
+
+GRANT CONNECT TO [GBZ_User]
+GO
+
+CREATE SCHEMA GBZ
+GO

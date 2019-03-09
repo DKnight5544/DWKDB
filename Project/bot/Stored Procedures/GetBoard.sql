@@ -1,7 +1,0 @@
-﻿CREATE PROCEDURE bot.GetBoard
-AS
-	SELECT	*
-	FROM	bot.Board
-	ORDER BY 1
-
-RETURN 0

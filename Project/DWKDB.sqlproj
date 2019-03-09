@@ -118,248 +118,53 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="tmrz" />
-    <Folder Include="tmrz\Tables" />
-    <Folder Include="tmrz\StoredProcedures" />
-    <Folder Include="tmrz\Views" />
-    <Folder Include="tmrz\LiveQueries" />
-    <Folder Include="tmrz\Functions" />
-    <Folder Include="wrd" />
-    <Folder Include="wrd\Tables" />
-    <Folder Include="wrd\StoredProcs" />
-    <Folder Include="wrd\Functions" />
-    <Folder Include="wrd\Views" />
-    <Folder Include="wrd\Scripts" />
-    <Folder Include="chess" />
-    <Folder Include="chess\Tables" />
-    <Folder Include="chess\Excel" />
-    <Folder Include="chess\StoredProcedures" />
-    <Folder Include="chess\View" />
-    <Folder Include="ou" />
-    <Folder Include="ou\StoredProcedures" />
-    <Folder Include="ou\Tables" />
-    <Folder Include="ou\Functions" />
-    <Folder Include="gift" />
-    <Folder Include="gift\tables" />
-    <Folder Include="gift\functions" />
-    <Folder Include="gift\procs" />
-    <Folder Include="gift\views" />
-    <Folder Include="WordScapeCheat" />
-    <Folder Include="WordScapeCheat\StoredProcedures" />
-    <Folder Include="WordScapeCheat\Tables" />
-    <Folder Include="WordScapeCheat\Functions" />
-    <Folder Include="bot\" />
-    <Folder Include="bot\Tables\" />
-    <Folder Include="bot\Views\" />
-    <Folder Include="Security\" />
-    <Folder Include="bot\Functions\" />
-    <Folder Include="bot\Stored Procedures\" />
+    <Folder Include="GameBotZone" />
+    <Folder Include="GameBotZone\Farkle" />
+    <Folder Include="GameBotZone\Farkle\Stored Procedures" />
+    <Folder Include="GameBotZone\Farkle\Tables" />
+    <Folder Include="GameBotZone\Farkle\Views" />
+    <Folder Include="GameBotZone\Global" />
+    <Folder Include="GameBotZone\Global\Tables" />
+    <Folder Include="GameBotZone\Global\Views" />
+    <Folder Include="GameBotZone\Global\Stored Procedures" />
+    <Folder Include="FakePyramid" />
+    <Folder Include="FakePyramid\Tables" />
+    <Folder Include="FakePyramid\Stored Procedures" />
+    <Folder Include="FakePyramid\Views" />
+    <Folder Include="PonziPal" />
+    <Folder Include="PonziPal\Tables" />
+    <Folder Include="PonziPal\Stored Procedures" />
+    <Folder Include="PonziPal\Views" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="tmrz\Tables\Pages.sql" />
-    <Build Include="tmrz\Tables\Timers.sql" />
-    <Build Include="tmrz\StoredProcedures\ToggleTimer.sql" />
-    <Build Include="tmrz\StoredProcedures\AddPage.sql" />
-    <Build Include="tmrz\StoredProcedures\AddTimer.sql" />
-    <Build Include="tmrz\Views\AllDataView.sql">
-      <AnsiNulls>Off</AnsiNulls>
-      <QuotedIdentifier>Off</QuotedIdentifier>
-    </Build>
-    <None Include="tmrz\LiveQueries\QueryOne.sql" />
-    <Build Include="tmrz\StoredProcedures\RenameTimer.sql" />
-    <Build Include="tmrz\StoredProcedures\RenamePage.sql" />
-    <Build Include="tmrz\Tables\IPN_Log.sql" />
-    <Build Include="tmrz\StoredProcedures\SaveIPN.sql" />
-    <Build Include="tmrz\StoredProcedures\ResetTimer.sql" />
-    <Build Include="tmrz\StoredProcedures\PagesCleanup.sql" />
-    <Build Include="tmrz\Functions\IsPage.sql" />
-    <Build Include="tmrz\StoredProcedures\DeleteTimer.sql" />
-    <Build Include="tmrz\StoredProcedures\GetPageRefreshData.sql" />
-    <Build Include="tmrz\StoredProcedures\AdjustTime.sql" />
-    <Build Include="wrd\Tables\Game.sql" />
-    <Build Include="wrd\Tables\LetterDistribution.sql" />
-    <None Include="wrd\Functions\fncNextOpenLocation.sql" />
-    <Build Include="wrd\Tables\GamePlayer.sql" />
-    <Build Include="wrd\Tables\Integers.sql" />
-    <Build Include="wrd\Tables\LegalWords.sql" />
-    <None Include="wrd\StoredProcs\AddLegalWord.sql" />
-    <None Include="wrd\Scripts\Reset Wordster.sql" />
-    <Build Include="wrd\Tables\Player.sql" />
-    <Build Include="wrd\StoredProcs\AddPlayer.sql" />
-    <Build Include="wrd\StoredProcs\GetPlayer.sql" />
-    <None Include="wrd\Scripts\LoadLetterDistribution.sql" />
-    <Build Include="wrd\StoredProcs\InsertGameRow.sql" />
-    <Build Include="wrd\StoredProcs\FindWords.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="wrd\StoredProcs\GameOver.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="wrd\Views\GameStats.sql" />
-    <Build Include="wrd\Tables\GamePlayerLetter.sql" />
-    <Build Include="wrd\StoredProcs\GetBoard.sql" />
-    <Build Include="wrd\StoredProcs\GetGamesByPlayerID.sql" />
-    <Build Include="wrd\StoredProcs\RepositionWords.sql" />
-    <Build Include="tmrz\Views\OneThousand.sql">
-      <AnsiNulls>Off</AnsiNulls>
-      <QuotedIdentifier>Off</QuotedIdentifier>
-    </Build>
-    <Build Include="tmrz\StoredProcedures\GetPage.sql" />
-    <Build Include="tmrz\Views\PageView.sql">
-      <AnsiNulls>Off</AnsiNulls>
-      <QuotedIdentifier>Off</QuotedIdentifier>
-    </Build>
-    <Build Include="tmrz\StoredProcedures\StopTimer.sql" />
-    <Build Include="tmrz\StoredProcedures\GetTimer.sql" />
-    <Build Include="chess\Tables\Engram.sql" />
-    <Build Include="chess\Tables\Game.sql" />
-    <Build Include="chess\StoredProcedures\GetNewGame.sql" />
-    <Build Include="chess\Tables\Move.sql" />
-    <Build Include="chess\StoredProcedures\GetBoard.sql" />
-    <Build Include="chess\StoredProcedures\GetBestMove.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="chess\StoredProcedures\SaveGame.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="chess\StoredProcedures\GetGameByGameID.sql" />
-    <Build Include="chess\View\MoveViewOne.sql" />
-    <Build Include="chess\StoredProcedures\GetLastGame.sql" />
-    <Build Include="chess\StoredProcedures\GetSelfGameStats.sql" />
-    <Build Include="chess\StoredProcedures\SaveMove.sql" />
-    <Build Include="chess\StoredProcedures\GetGameByWebID.sql" />
-    <Build Include="chess\StoredProcedures\SaveGameByWebID.sql" />
-    <Build Include="chess\StoredProcedures\SaveGamePart2.sql" />
-    <Build Include="ou\Tables\IPN_Log.sql" />
-    <Build Include="ou\Tables\User.sql" />
-    <Build Include="ou\StoredProcedures\AddUser.sql" />
-    <Build Include="ou\StoredProcedures\GetSponsor.sql" />
-    <Build Include="ou\StoredProcedures\SaveIPN.sql" />
-    <Build Include="ou\StoredProcedures\GetUser.sql" />
-    <Build Include="ou\Functions\GetNextSponsorID.sql" />
-    <Build Include="gift\tables\Giver.sql" />
-    <Build Include="gift\procs\AddGiver.sql" />
-    <Build Include="gift\procs\GetGiverByShareCode.sql" />
-    <Build Include="gift\procs\GetGiverByGiverID.sql" />
-    <Build Include="gift\views\GiverView.sql" />
-    <Build Include="WordScapeCheat\Tables\ValidWords.sql" />
-    <Build Include="WordScapeCheat\StoredProcedures\FetchMatches.sql" />
-    <Build Include="bot\Tables\Moves.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Tables\Games.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Tables\GameMoves.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Tables\Bots.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Tables\BotBrains.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Tables\Board.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Tables\UserState.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Views\BotBrainView.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Functions\GetNextMoveID.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Functions\GetNextMove.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Functions\IsRealBot.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Functions\GetBoardValue.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Functions\GetBoardLayout.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Functions\GetLegalMoves.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Stored Procedures\RecordMove.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Stored Procedures\RecordImpact.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Stored Procedures\PushMove.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Stored Procedures\PrintBoard.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Stored Procedures\Play.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Stored Procedures\GetNewGame.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Stored Procedures\GetBoard.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Stored Procedures\CreateNewBot.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Stored Procedures\SetUserState.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="bot\Stored Procedures\GetUserState.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="Security\bot.sql" />
-    <Build Include="Security\Chess.sql" />
-    <Build Include="Security\Gift.sql" />
-    <Build Include="Security\ou.sql" />
-    <Build Include="Security\tmrz.sql" />
-    <Build Include="Security\WordScapeCheat.sql" />
-    <Build Include="Security\wrd.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Notes.txt" />
-    <PostDeploy Include="PostDeploymentScript.sql" />
-    <None Include="wrd\Scripts\FindWords.sql" />
-    <None Include="wrd\Scripts\Insert_10000_Games.sql" />
-    <None Include="chess\Excel\PositionMapInserts.xlsx" />
+    <Build Include="GameBotZone\Farkle\Stored Procedures\GetLeaderboard.sql" />
+    <Build Include="GameBotZone\Farkle\Tables\Game.sql" />
+    <Build Include="GameBotZone\Global\Tables\Bot.sql" />
+    <Build Include="GameBotZone\Farkle\Farkle.sql" />
+    <Build Include="GameBotZone\Global\Stored Procedures\AddUpdateBot.sql" />
+    <Build Include="GameBotZone\Farkle\Stored Procedures\AddGame.sql" />
+    <Build Include="GameBotZone\Global\GBZ.sql" />
+    <Build Include="GameBotZone\Farkle\Views\GameView.sql" />
+    <Build Include="GameBotZone\Farkle\Stored Procedures\GetGame.sql" />
+    <Build Include="GameBotZone\Farkle\Stored Procedures\EndGame.sql" />
+    <Build Include="FakePyramid\FP.sql" />
+    <Build Include="FakePyramid\Tables\User.sql" />
+    <Build Include="FakePyramid\Stored Procedures\User_Insert.sql" />
+    <Build Include="FakePyramid\Stored Procedures\User_SelectByUserID.sql" />
+    <Build Include="FakePyramid\Views\UserView.sql" />
+    <Build Include="FakePyramid\Tables\AlternatePayeeMap.sql" />
+    <Build Include="PonziPal\pnz.sql" />
+    <Build Include="PonziPal\Tables\Chain.sql" />
+    <Build Include="PonziPal\Stored Procedures\GetMembers.sql" />
+    <Build Include="PonziPal\Stored Procedures\AddMember.sql" />
+    <Build Include="PonziPal\Tables\Member.sql" />
+    <Build Include="PonziPal\Tables\ChainMember.sql" />
+    <Build Include="PonziPal\Views\AllDataView.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="DWKDB.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>
