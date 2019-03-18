@@ -131,10 +131,6 @@
     <Folder Include="FakePyramid\Tables" />
     <Folder Include="FakePyramid\Stored Procedures" />
     <Folder Include="FakePyramid\Views" />
-    <Folder Include="PonziPal" />
-    <Folder Include="PonziPal\Tables" />
-    <Folder Include="PonziPal\Stored Procedures" />
-    <Folder Include="PonziPal\Views" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="GameBotZone\Farkle\Stored Procedures\GetLeaderboard.sql" />
@@ -150,16 +146,11 @@
     <Build Include="FakePyramid\FP.sql" />
     <Build Include="FakePyramid\Tables\User.sql" />
     <Build Include="FakePyramid\Stored Procedures\User_Insert.sql" />
-    <Build Include="FakePyramid\Stored Procedures\User_SelectByUserID.sql" />
     <Build Include="FakePyramid\Views\UserView.sql" />
-    <Build Include="FakePyramid\Tables\AlternatePayeeMap.sql" />
-    <Build Include="PonziPal\pnz.sql" />
-    <Build Include="PonziPal\Tables\Chain.sql" />
-    <Build Include="PonziPal\Stored Procedures\GetMembers.sql" />
-    <Build Include="PonziPal\Stored Procedures\AddMember.sql" />
-    <Build Include="PonziPal\Tables\Member.sql" />
-    <Build Include="PonziPal\Tables\ChainMember.sql" />
-    <Build Include="PonziPal\Views\AllDataView.sql" />
+    <Build Include="FakePyramid\Stored Procedures\User_SelectByUserName.sql" />
+    <Build Include="FakePyramid\Stored Procedures\User_UpdateUserName.sql" />
+    <Build Include="FakePyramid\Tables\Setting.sql" />
+    <Build Include="FakePyramid\Stored Procedures\Setting_SelectByKey.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="DWKDB.refactorlog" />

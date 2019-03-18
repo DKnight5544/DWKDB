@@ -14,4 +14,6 @@ Grant Execute on Farkle.GetLeaderboard to GBZ_User;
 
 grant select on FP.UserView to FP_User;
 grant execute on FP.User_Insert to FP_User;
-grant execute on FP.User_SelectByUserID to FP_User;
+grant execute on FP.User_SelectByUserName to FP_User;
+grant execute on FP.User_UpdateUserName to FP_User;
+grant execute on FP.Setting_SelectByKey to FP_User;
