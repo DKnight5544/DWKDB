@@ -1,26 +1,32 @@
 ﻿CREATE PROCEDURE [FP].[User_Insert]
-	  @TransID varchar(20)
-	, @ParentName varchar(30)
-	, @PayeeName varchar(30)
+	  @PayeeID varchar(15)
+	, @NewUserID varchar(15)
+	, @UserName varchar(30)
 AS
 
 
-select @ParentName = lower(@ParentName);
 
- -- Parent Must Exist
- if not exists (select 1 from FP.[User] u where u.UserName = @ParentName) set @ParentName = 'wigiwiz'
+ -- Payee Must Exist
+ if not exists (select 1 from FP.[User] u where u.UserID = @PayeeID) set @PayeeID = 'SF5J7FCW8LHQC'
+
+ -- NewUserID Must NOT Exist
+ if not exists (select 1 from FP.[User] u where u.UserID = @NewUserID) begin
 
  
 -- Insert New User
-insert into FP.[User] (TransID, ParentName, PayeeName)
-select @TransID, @ParentName, @PayeeName
-where not exists(
-	select 1 from FP.[User] u 
-	where u.TransID = @TransID
-)
+insert into FP.[User] (UserID, PayeeID)
+select @NewUserID, @PayeeID
 ;
 
-exec FP.User_SelectByUserName @TransID;
+-- Update Transaction Count
+update FP.[User]
+set TransactionCount += 1
+where UserName = @UserName
+;
+
+end
+
+exec FP.User_Select @NewUserID;
 
 return 0;
 

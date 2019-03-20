@@ -1,23 +1,20 @@
 ﻿CREATE TABLE [FP].[User]
 (
-	  TransID varchar(20) not null
-	, [UserName] varchar(30) null
-	, [ParentName] varchar(30) NOT NULL
-	, [PayeeName] varchar(30) NOT NULL
-	,[JoinDateTime] DATETIME NOT NULL default(getdate())
-	, CONSTRAINT [PK_User] PRIMARY KEY ([TransID])
+	  [UserID] varchar(15) NOT NULL
+	, [PayeeID] varchar(15) NOT NULL
+	, [UserName] varchar(30) NULL
+	, [TransactionCount] INT NOT NULL DEFAULT 0
+	, [ImageUrl] varchar(max) NULL
+	, [ButtonText] VARCHAR(100) NULL, 
+    CONSTRAINT [PK_User] PRIMARY KEY ([UserID])
+	, CONSTRAINT [FK_User_User] FOREIGN KEY ([PayeeID]) REFERENCES FP.[User]([UserID])
 )
 
 GO
 
-CREATE INDEX [IX_User_JoinDateTime] ON [FP].[User] ([JoinDateTime])
+CREATE INDEX [IX_User_UserName] ON [FP].[User] ([UserName])
 GO
 
-CREATE UNIQUE INDEX [UIX_User_UserName] ON [FP].[User] ([UserName])
+CREATE INDEX [IX_User_PayeeID] ON [FP].[User] ([PayeeID])
 GO
 
-CREATE INDEX [IX_User_ParentName] ON [FP].[User] ([ParentName])
-GO
-
-CREATE INDEX [IX_User_PayeeName] ON [FP].[User] ([ParentName])
-GO

@@ -147,10 +147,11 @@
     <Build Include="FakePyramid\Tables\User.sql" />
     <Build Include="FakePyramid\Stored Procedures\User_Insert.sql" />
     <Build Include="FakePyramid\Views\UserView.sql" />
-    <Build Include="FakePyramid\Stored Procedures\User_SelectByUserName.sql" />
-    <Build Include="FakePyramid\Stored Procedures\User_UpdateUserName.sql" />
+    <Build Include="FakePyramid\Stored Procedures\User_Update.sql" />
     <Build Include="FakePyramid\Tables\Setting.sql" />
     <Build Include="FakePyramid\Stored Procedures\Setting_SelectByKey.sql" />
+    <Build Include="FakePyramid\Stored Procedures\User_Select.sql" />
+    <Build Include="FakePyramid\Stored Procedures\User_Customize.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="DWKDB.refactorlog" />
