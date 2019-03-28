@@ -1,20 +1,9 @@
 ﻿
 
-Grant select on Farkle.GameView to GBZ_User;
 
-
-Grant execute on GBZ.AddUpdateBot to GBZ_User;
-Grant Execute on Farkle.AddGame to GBZ_User;
-Grant Execute on Farkle.GetGame to GBZ_User;
-Grant Execute on Farkle.EndGame to GBZ_User;
-Grant Execute on Farkle.GetLeaderboard to GBZ_User;
-
-
---FP--------------------------------------------------------------------------
-
-grant select on FP.UserView to FP_User;
-grant execute on FP.User_Insert to FP_User;
-grant execute on FP.User_Select to FP_User;
-grant execute on FP.User_Update to FP_User;
-grant execute on FP.User_Customize to FP_User;
-grant execute on FP.Setting_SelectByKey to FP_User;
+grant select on UserView to App_User;
+grant execute on User_Insert to App_User;
+grant execute on User_Select to App_User;
+grant execute on User_Update to App_User;
+grant execute on User_UpdateClickCounter to App_User;
+grant execute on Setting_SelectByKey to App_User;

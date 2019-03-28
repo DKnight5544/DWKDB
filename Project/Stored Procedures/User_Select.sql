@@ -1,12 +1,13 @@
 ﻿
 
 -- exec fp.User_select 'wigiwiz'
-CREATE PROCEDURE [FP].[User_Select]
+CREATE PROCEDURE [User_Select]
 	@Key varchar(30)
 AS
 
 	select *
-	from FP.UserView v
+
+	from UserView v
 	where v.UserID = @Key
 	or v.UserName = @Key
 	;

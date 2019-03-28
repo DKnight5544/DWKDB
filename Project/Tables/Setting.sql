@@ -1,4 +1,4 @@
-﻿CREATE TABLE [FP].[Setting]
+﻿CREATE TABLE [Setting]
 (
 	[Key] varchar(20) not null
 	,[Value] varchar(MAX) not null
